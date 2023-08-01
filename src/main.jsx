@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Index />,
+    element: < indexPages />,
   },
   
 ]);

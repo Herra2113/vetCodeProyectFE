@@ -9,14 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/Comentarios/Comentarios.jsx';
 import Comentario from './components/Comentarios/Comentarios.jsx';
 
-function Main() {
-  return (
-    <>
-    <Comentario />
-    </>
 
-  )
-}
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,5 +23,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </React.StrictMode>,
 );
-
-Main();

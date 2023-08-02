@@ -6,14 +6,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/Comentarios/Comentarios.jsx';
-import Comentario from './components/Comentarios/Comentarios.jsx';
-
+import IndexPages from './pages/index/IndexPages';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: < indexPages />,
+    element: < IndexPages />,
   },
   
 ]);

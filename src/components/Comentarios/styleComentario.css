@@ -1,5 +1,31 @@
 .comentariodiv{
-    margin-top: 20px;
-    padding:15px;
-    background:#f9f9f9;
+    margin: 20px;
+}
+
+.cardcomentario{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 28rem;
+}
+
+#imageniconocoment{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    border:1px rgb(98, 97, 97) solid;
+}
+
+.cardcomentario2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nombrecomentarios{
+    margin-left: 0.5rem;
 }

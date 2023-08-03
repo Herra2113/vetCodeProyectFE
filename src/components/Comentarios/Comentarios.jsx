@@ -5,8 +5,10 @@ import imagenicono2 from "../../assets/Images/iconouser.jpg";
 
 const Comentarios = () => {
   return (
-    <div className="container-fluid row">
-      <Card className="cardcomentario col-sm-12 col-md-4">
+    <div className="container-fluid d-flex" id="contenedorcomentarios">
+      <div className="row">
+
+      <Card className="cardcomentario col-sm-12 col-md-6 col-lg-4">
         <img
           className=""
           id="imageniconocoment"
@@ -33,8 +35,9 @@ const Comentarios = () => {
           </Card.Text>
         </Card.Body>
       </Card>
+      
 
-      <Card className="cardcomentario col-sm-12 col-md-4">
+      <Card className="cardcomentario col-sm-12 col-md-6 col-lg-4">
         <img
           className=""
           id="imageniconocoment"
@@ -59,7 +62,7 @@ const Comentarios = () => {
         </Card.Body>
       </Card>
 
-      <Card className="cardcomentario col-sm-12 col-md-4">
+      <Card className="cardcomentario col-sm-12 col-md-6 col-lg-4">
         <img
           className=""
           id="imageniconocoment"
@@ -86,6 +89,7 @@ const Comentarios = () => {
           </Card.Text>
         </Card.Body>
       </Card>
+      </div>
     </div>
   );
 };

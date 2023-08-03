@@ -33,3 +33,8 @@
 .nombrecomentarios{
     margin-left: 0.5rem;
 }
+
+#contenedorcomentarios{
+    display: flex;
+    justify-content: space-between;
+}

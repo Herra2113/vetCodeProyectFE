@@ -83,7 +83,7 @@ const Comentarios = () => {
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star"></i>
           </div>
-          <Card.Text>
+          <Card.Text id="comentariosdeusuario3">
             Lleve a mi perro "Benedeto" y lo trataron muy bien. Nada para
             reprochar.
           </Card.Text>

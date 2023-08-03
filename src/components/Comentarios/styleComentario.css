@@ -7,7 +7,7 @@
     border-radius: 15px;
     display: flex;
     flex-direction: row;
-    width: 28rem;
+    /* width: 28rem; */
 }
 
 #imageniconocoment{
@@ -17,13 +17,18 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     border-radius: 50%;
-    border:1px rgb(98, 97, 97) solid;
+    border:0.5px rgb(91, 89, 89) solid;
+    box-shadow: rgb(97, 96, 96) 1px 5px 10px;
 }
 
 .cardcomentario2{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.cardcomentario i{
+    color: rgb(222, 222, 70);
 }
 
 .nombrecomentarios{

@@ -6,6 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.css"
 import IndexPages from './pages/index/IndexPages';
 
 const router = createBrowserRouter([

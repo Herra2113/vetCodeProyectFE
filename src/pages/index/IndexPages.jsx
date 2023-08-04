@@ -3,13 +3,13 @@ import Comentarios from "../../components/Comentarios/Comentarios";
 import Publicidad from "../../components/Publicidad/Publicidad";
 
 const IndexPages = () => {
-	return(
+  return (
     <>
-      < CarouselIndex /> 
+      <CarouselIndex />
       <Comentarios />
       <Publicidad />
     </>
-	);
-}
+  );
+};
 
-export default IndexPages
+export default IndexPages;

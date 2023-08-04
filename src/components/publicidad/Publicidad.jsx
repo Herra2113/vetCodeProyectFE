@@ -1,13 +1,21 @@
-import './stylePublicidad.css'
+import "./stylePublicidad.css";
+import imagenpublicidad from "../../assets/Images/publicidadcomida.png";
 
 const Publicidad = () => {
-    return(
-        <div className="publicidadDiv">
-            <h1>Hola</h1>
-            <p>logo</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptatem ipsa hic, tempore dolor vel cum optio distinctio explicabo, pariatur dolorum voluptatibus odit odio ipsam. Facilis nulla nesciunt architecto doloremque.</p>
-        </div>
-    )   
-}
+  return (
+    <div className="publicidadDiv mb-5">
+      <a href="https://www.google.com">
+        <img
+          src={imagenpublicidad}
+          alt="publicidad paga de la pagina"
+          id="imagenpublicidad"
+        />
+        <button type="button" class="btn btn-primary" id="botonpublicidad">
+          Mas info!
+        </button>
+      </a>
+    </div>
+  );
+};
 
 export default Publicidad;

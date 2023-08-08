@@ -16,7 +16,7 @@ const Profesionales = () => {
           <Card.Body>
             <Card.Title>Dra. Juana Carrasco</Card.Title>
             <Card.Text>
-              cuenta con mas de 7 años de experiencia en el area de  Oncologia.
+              cuenta con mas de 7 años de experiencia en el area de Oncologia.
             </Card.Text>
           </Card.Body>
         </Card>

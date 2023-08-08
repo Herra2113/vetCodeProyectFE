@@ -23,11 +23,11 @@ const Comentarios = () => {
             </Card.Subtitle>
           </div>
           <div className="mb-1">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-half"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-half"></i>
           </div>
           <Card.Text>
             Muy buena la atencion, excelente trato de los medicos profesionales
@@ -52,11 +52,11 @@ const Comentarios = () => {
             </Card.Subtitle>
           </div>
           <div className="mb-1">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
           </div>
           <Card.Text>epetacular la pagina che . muy linda .</Card.Text>
         </Card.Body>
@@ -77,14 +77,14 @@ const Comentarios = () => {
             </Card.Subtitle>
           </div>
           <div className="mb-1">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star-fill"></i>
+            <i className="bi bi-star"></i>
           </div>
           <Card.Text id="comentariosdeusuario3">
-            Lleve a mi perro "Benedeto" y lo trataron muy bien. Nada para
+            Lleve a mi perro BENEDETTO  y lo trataron muy bien. Nada para
             reprochar.
           </Card.Text>
         </Card.Body>

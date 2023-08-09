@@ -44,10 +44,10 @@
   font-size: 0.8rem;
 }
 
-#prod1{
-    margin: auto ;
-    width: 12rem;
-    height: 13rem;
+#prod1 {
+  margin: auto;
+  width: 12rem;
+  height: 13rem;
 }
 
 #prod2 {
@@ -78,7 +78,7 @@
   text-decoration: none;
 }
 
-.productoSolo:hover{
+.productoSolo:hover {
   box-shadow: 0px 0px 20px rgb(45, 45, 45);
   transition-duration: 200ms;
 }

@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import IndexPages from './pages/index/indexPages';
+import AboutPage from './pages/About/AboutPage';
+import ContactPage from './pages/Contact/ContactPage';
 
 
 const router = createBrowserRouter([
@@ -15,6 +17,15 @@ const router = createBrowserRouter([
     element: <IndexPages />,
   },
   
+  {
+    path: "/Nosotros",
+    element: <AboutPage />,
+  },
+
+  {
+    path: "/Contacto",
+    element: <ContactPage />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

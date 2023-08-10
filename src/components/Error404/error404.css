@@ -1,0 +1,12 @@
+.bgBody{
+    background-color: #748DA6;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+.text-color {
+  color: #F2D7D9;
+}

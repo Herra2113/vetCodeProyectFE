@@ -6,11 +6,19 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
+import IndexPages from './pages/index/IndexPages';
+import ErrorPage404 from './pages/Error404/ErrorPage404';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Index />,
+    element: <IndexPages />,
+  },
+  {
+    path: "/error404",
+    element: <ErrorPage404 />,
   },
   
 ]);

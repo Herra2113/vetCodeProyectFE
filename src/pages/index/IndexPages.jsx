@@ -6,6 +6,8 @@ import Publicidad from "../../components/Publicidad/Publicidad";
 import ProductosDeseados from "../../components/ProductosDeseados/ProductosDeseados";
 import Footer from "../../components/Footer/Footer";
 
+
+
 const IndexPages = () => {
   return (
     <>

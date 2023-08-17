@@ -21,7 +21,7 @@ const CardPlanes = () => {
               <Card.Text>
                 El plan perfecto para acompañar los primeros años de vida tus pequeños 
               </Card.Text>
-              <Button className="buttonPlan" href="https://google.com" target="blank" variant="secondary">¡Quiero conocer este plan!</Button>
+              <Button className="buttonPlan" href="/DetallesplanCachorros" target="blank" variant="secondary">¡Quiero conocer este plan!</Button>
             </Card.Body>
           </Card>
         </div>
@@ -33,7 +33,7 @@ const CardPlanes = () => {
               <Card.Text>
                 !Un plan diseñado para cuidar a los mas energicos de nuestras casas!
               </Card.Text>
-              <Button className="buttonPlan" href="https://google.com" target="blank" variant="secondary">¡Quiero conocer este plan!</Button>
+              <Button className="buttonPlan" href="/DetallesplanMadurando" target="blank" variant="secondary">¡Quiero conocer este plan!</Button>
             </Card.Body>
           </Card>
         </div>
@@ -45,7 +45,7 @@ const CardPlanes = () => {
               <Card.Text>
                 Un plan diseñado a medida de nuestros viejos amigos
               </Card.Text>
-              <Button className="buttonPlan" href="https://google.com" target="blank" variant="secondary">¡Quiero conocer este plan!</Button>
+              <Button className="buttonPlan" href="/DetallesplanAdultos" target="blank" variant="secondary">¡Quiero conocer este plan!</Button>
             </Card.Body>
           </Card>
         </div>

@@ -3,6 +3,7 @@ import React from "react";
 import Formulario from "../Detallesplancachorros/Formulario";
 import CoberturasyServicios from "../Detallesplancachorros/CoberturasyServicios";
 
+
 const DetallesplanMadurando = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const DetallesplanMadurando = () => {
         </h1>
         <CoberturasyServicios />
         <Formulario />
+        
       </div>
     </>
   );

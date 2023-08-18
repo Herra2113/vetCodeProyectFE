@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <IndexPages />,
   },
   {
-    path: "/error404",
+    path: "/*",
     element: <ErrorPage404 />,
   },
   {

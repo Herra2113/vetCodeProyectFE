@@ -1,7 +1,7 @@
 import React from "react";
 import Gato from "../../assets/Images/GatitoContacto.jpg";
 
-const  Panel = () => {
+const Panel = () => {
   return (
     <div className="row PanelContacto m-3">
       <div className="col-md-9 m-1 fw-semibold">
@@ -22,5 +22,5 @@ const  Panel = () => {
       </div>
     </div>
   );
-}
+};
 export default Panel;

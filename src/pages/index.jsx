@@ -6,4 +6,4 @@ const indexPages = () => {
   )
 }
 
-export default indexPages
+export default indexPages;

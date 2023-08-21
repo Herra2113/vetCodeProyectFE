@@ -1,7 +1,6 @@
 import Cards from "../../components/About/Cards";
 import Texto from "../../components/About/Texto";
 import "../../components/About/About.css";
-import WorkWithUs from "../../components/About/WorkWithUs";
 
 const AboutPage = () => {
   return (

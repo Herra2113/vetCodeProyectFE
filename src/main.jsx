@@ -14,6 +14,7 @@ import ErrorPage404 from './pages/Error404/ErrorPage404';
 import Cachorros from './components/DetallesplanCachorros/Cachorros';
 import Adultos from './components/Detallesplanadultos/Adultos';
 import Madurando from './components/Detallesplanmadurando/DetallesplanMadurando'
+import LoginPages from './pages/Login/LoginPage';
 
 const router = createBrowserRouter([
   {
@@ -33,11 +34,22 @@ const router = createBrowserRouter([
     element: <Adultos/>
   },
   {
-    path: "/error404",
-    element: <ErrorPage404 />,
-<<<<<<< HEAD
+    path: "/DetallesplanCachorros",
+    element: <Cachorros/>
   },
-  
+  {
+    path: "/DetallesplanMadurando",
+    element: <Madurando/>
+  },
+  {
+    path: "/DetallesplanAdultos",
+    element: <Adultos/>
+  },
+  {
+    path: "/*",
+    element: <ErrorPage404 />,
+
+  },
   {
     path: "/Nosotros",
     element: <AboutPage />,
@@ -47,10 +59,10 @@ const router = createBrowserRouter([
     path: "/Contacto",
     element: <ContactPage />,
   },
-=======
-
-  }
->>>>>>> 80cf215aedbfed7d85175db07fe4a68b7b995ba5
+  {
+    path: "/login",
+    element: <LoginPages />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

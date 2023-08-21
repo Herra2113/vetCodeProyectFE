@@ -4,7 +4,7 @@ import './error404.css'
 
 const Error404 = () => {
   return (
-    <div className="bgBody align-items-center">
+    <div className="bgBody ">
       <div className="text-center container">
         <img src={ErrorImg} alt="Error404" className="w-50"  />
         <h1>

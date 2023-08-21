@@ -17,7 +17,6 @@ const IndexPages = () => {
       <Publicidad />
       <ProductosDeseados />
       <Comentarios />
-      <Footer/>
     </>
   );
 };

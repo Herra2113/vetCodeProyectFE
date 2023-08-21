@@ -1,0 +1,34 @@
+{
+  "turnos": [
+    {
+      "TurnoPetName": "Nicanoraaaa",
+      "TurnoDoctor": "Dra Liza Morgan",
+      "TurnoDetalle": "cancer",
+      "TurnoFecha": "2023-08-24",
+      "TurnoHora": "18:00",
+      "id": 4
+    }
+  ],
+  "patients": [
+    {
+      "nombre": "franco",
+      "apellido": "pazaaaaa",
+      "eMail": "franco.paz.712@gmail.com",
+      "telefono": "3816570405",
+      "nombreMascota": "nicanor",
+      "especie": "Perro",
+      "raza": "Rotweiler",
+      "id": 1
+    },
+    {
+      "nombre": "juan",
+      "apellido": "carlos",
+      "eMail": "carlos@gmail.com",
+      "telefono": "15151321215",
+      "nombreMascota": "asddd",
+      "especie": "Perro",
+      "raza": "asdasd",
+      "id": 2
+    }
+  ]
+}

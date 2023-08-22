@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Container, Table } from "react-bootstrap";
 import ListaClientes from "./ListaClientes/ListaClientes";
 import { Link } from "react-router-dom";
@@ -7,14 +8,14 @@ const AdminClientes = ({ patients, URL, getApi }) => {
     <div>
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
-          <h3 className="text-center text-danger display-4">
+          <h3 className="text-center text-color fw-bold display-4">
             Lista de Pacientes
           </h3>
           <Link
-            to="/admin/clientes/create"
-            className="btn btn-primary rounded-pill"
+            to="/Turnos/Create"
+            className="btn btn-colorize rounded-pill"
           >
-            Agregar Pacientes
+            Agregar Turnos
           </Link>
         </div>
         <hr />

@@ -11,18 +11,8 @@
   ],
   "patients": [
     {
-      "nombre": "franco",
-      "apellido": "pazaaaaa",
-      "eMail": "franco.paz.712@gmail.com",
-      "telefono": "3816570405",
-      "nombreMascota": "nicanor",
-      "especie": "Perro",
-      "raza": "Rotweiler",
-      "id": 1
-    },
-    {
       "nombre": "juan",
-      "apellido": "carlos",
+      "apellido": "carlanfgas",
       "eMail": "carlos@gmail.com",
       "telefono": "15151321215",
       "nombreMascota": "asddd",

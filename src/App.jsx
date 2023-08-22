@@ -16,6 +16,9 @@ import UpdateClient from "./pages/AdminView/UpdateClient";
 import TurnosCreate from "./pages/TurnosCreate/TurnosCreate";
 import TurnosEdit from "./pages/TurnosEdit/TurnosEdit";
 import TurnosTabla from "./pages/TurnosTabla/TurnosTabla";
+import AboutPage from "./pages/About/AboutPage";
+import ContactPage from "./pages/Contact/ContactPage";
+import LoginPage from "./pages/Login/LoginPage";
 
 const App = () => {
   const [patients, setPatients] = useState([]);
@@ -56,10 +59,14 @@ const App = () => {
       <main>
         <Routes>
           <Route exact path="/" element={<IndexPages />} />
-          <Route exact path="/DetallesplanCachorros" element={<Cachorros />} />
           <Route exact path="*" element={<ErrorPage404 />} />
+          <Route exact path="/DetallesplanCachorros" element={<Cachorros />} />
           <Route exact path="/DetallesplanMadurando" element={<Madurando />} />
           <Route exact path="/DetallesplanAdultos" element={<Adultos />} />
+          <Route exact path="/Nosotros" element={<AboutPage />} />
+          <Route exact path="/Contacto" element={<ContactPage />} />
+          <Route exact path="/login" element={<LoginPage />} />
+          
           <Route
             exact
             path="/admin"

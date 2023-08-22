@@ -1,4 +1,9 @@
+/* eslint-disable react/prop-types */
 import  { useState } from 'react';
+
+import image1 from '../../assets/Images/Madurando3.jpg'
+import image2 from '../../assets/Images/jovenes.jpg'
+
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import {
   validateNames,
@@ -73,21 +78,21 @@ const AdminClientesCreate = ({ URL, getApi }) => {
   };
   return (
     <div>
-      <Container className="py-5">
-        <h3 className="text-center text-danger display-4">Agendar Pacientes</h3>
-        <hr />
+      <Container  className="py-5 ">
+        <h3 className="text-center fw-bold text-color display-4">REGISTRO DE PACIENTES</h3>
+        <hr  className='color'/>
         <Row>
           <Col sm={12} md={6}>
             <div>
               <img
-                src="https://cdn.royalcanin-weshare-online.io/AGnN0GYBG95Xk-RB3t6O/v1/german-shepherd-adult-maine-coon-emblematic"
+                src={image1}
                 alt="perro en blanco y negro con su amigo el gato"
                 className="img-fluid mt-5"
               />
             </div>
             <div>
               <img
-                src="https://dojiw2m9tvv09.cloudfront.net/11787/product/royalcaninlatasvetdietrecoveryfeline-canine145gr25347.png"
+                src={image2}
                 alt="perro en blanco y negro con su amigo el gato"
                 className="img-fluid mt-5"
               />
@@ -95,7 +100,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
           </Col>
           <Col sm={12} md={6} className="my-4">
             <Form className="my-5" onSubmit={hundleSubmit}>
-              <h4 className="text-danger">Informacion del Cliente</h4>
+              <h4 className="text-color fw-bold">Informacion del Cliente</h4>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label className="fw-bolder">Nombre</Form.Label>
                 <Form.Control
@@ -133,7 +138,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
                 />
               </Form.Group>
               <hr />
-              <h4 className="text-danger">Informacion de la Mascota</h4>
+              <h4 className="text-color fw-bold">Informacion de la Mascota</h4>
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label className="fw-bolder">
                   Nombre de la Mascota

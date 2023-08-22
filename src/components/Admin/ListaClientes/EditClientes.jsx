@@ -10,6 +10,9 @@ import {
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import image3 from '../../../assets/Images/Adultos.jpg'
+import image4 from '../../../assets/Images/Adultocard.jpg'
+
 
 const EditClientes = ({ URL , getApi }) => {
   const [patient, setPatient] = useState({});
@@ -101,22 +104,22 @@ const EditClientes = ({ URL , getApi }) => {
   return (
     <div>
       <Container className="py-5">
-        <h3 className="text-center text-danger display-4">
-          Administrar Clientes
+        <h3 className="text-center text-color fw-bold display-4">
+          EDITAR CLIENTES
         </h3>
         <hr />
         <Row>
           <Col sm={12} md={6}>
             <div>
               <img
-                src="https://cdn.royalcanin-weshare-online.io/AGnN0GYBG95Xk-RB3t6O/v1/german-shepherd-adult-maine-coon-emblematic"
+                src={image3}
                 alt="perro en blanco y negro con su amigo el gato"
                 className="img-fluid mt-5"
               />
             </div>
             <div>
               <img
-                src="https://dojiw2m9tvv09.cloudfront.net/11787/product/royalcaninlatasvetdietrecoveryfeline-canine145gr25347.png"
+                src={image4}
                 alt="perro en blanco y negro con su amigo el gato"
                 className="img-fluid mt-5"
               />
@@ -165,7 +168,7 @@ const EditClientes = ({ URL , getApi }) => {
                 />
               </Form.Group>
               <hr />
-              <h4 className="text-danger">Informacion de la Mascotta</h4>
+              <h4 className="text-color fw-bold">INFORMACION DE LA MASCOTA</h4>
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label className="fw-bolder">
                   Nombre de la Mascota
@@ -202,7 +205,7 @@ const EditClientes = ({ URL , getApi }) => {
                 />
               </Form.Group>
               <div className="text-end">
-                <button className="btn btn-success">Guardar</button>
+                <button className="btn btn-colorize">Guardar</button>
               </div>
             </Form>
           </Col>

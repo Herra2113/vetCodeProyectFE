@@ -6,7 +6,7 @@
 
   
    #contenedorPC{
-    background-image:url("../../assets/Images/Cachorros.jpg");
+    background-image:url(../../assets/Images/Cachorros.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

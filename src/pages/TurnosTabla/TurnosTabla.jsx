@@ -3,14 +3,16 @@
 import { Container, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Turnos from './Turnos/Turnos';
+import '../AdminView/admin.css'
+
 
 const TurnosTabla = ({ turnos, URLS, getAp }) => {
   return (
-    <div>
+    <div className='bg-color turnos-heigth'>
       <Container className="py-5">
         <div className="d-flex align-items-center justify-content-between">
-          <h3 className=" text-danger display-4">Lista Turnos</h3>
-          <Link className="btn btn-primary rounded-pill" to="/Turnos/Create">
+          <h3 className="text-color fw-bold display-4">LISTA TURNOS</h3>
+          <Link className="btn btn-colorize rounded-pill" to="/Turnos/Create">
             Agregar Turno
           </Link>
         </div>

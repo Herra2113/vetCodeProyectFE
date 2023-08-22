@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import  { useState } from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import {
   validateFecha,
@@ -10,6 +10,8 @@ import {
   validateProf,
   validatetextarea,
 } from '../../Helpers/validacionesTurnos';
+import '../AdminView/admin.css'
+import image1 from '../../assets/Images/Enfermero.jpg'
 
 const TurnosCreate = ({ URLS, getAp }) => {
   const [TurnoPetName, setTurnoPetName] = useState('');
@@ -75,15 +77,16 @@ const TurnosCreate = ({ URLS, getAp }) => {
   };
 
   return (
-    <div>
-      <Container className="my-5 container">
-        <h3 className="text-center text-danger display-4">Agendar Turnos</h3>
+    <div className='bg-color'>
+      <Container className="py-5 container">
+        <h3 className="text-center text-color fw-bold display-4">AGENDAR TURNOS</h3>
+        <Link to='/Turnos/Tabla' className='fw-bold' >VER TURNOS ASIGNADOS</Link>
         <hr />
         <Row>
           <Col sm={12} md={6}>
             <div className="my-5">
               <img
-                src="https://dojiw2m9tvv09.cloudfront.net/11787/product/royalcaninlatasvetdietrecoveryfeline-canine145gr25347.png"
+                src={image1}
                 alt="perro en blanco y negro con su amigo el gato"
                 className="img-fluid mt-5"
               />
@@ -110,8 +113,8 @@ const TurnosCreate = ({ URLS, getAp }) => {
                   onChange={({ target }) => setTurnoDoctor(target.value)}
                 >
                   <option value="">Seleccione al profesional</option>
-                  <option value="Dra Liza Morgan">Dra Liza Morgan</option>
-                  <option value="Dr Adrian Munir">Dr Adrian Munir</option>
+                  <option value="Dra Liza Morgan">Dra Juana Carrasco</option>
+                  <option value="Dr Adrian Munir">Dr John Dolittle</option>
                 </Form.Select>
               </Form.Group>
               <Form.Group

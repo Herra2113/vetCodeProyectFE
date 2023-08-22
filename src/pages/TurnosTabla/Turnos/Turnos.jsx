@@ -53,7 +53,7 @@ const Turnos = ({ turno, URLS, getAp }) => {
         <div className="d-flex justify-content-center ">
           <Link
             to={`/Turnos/Edit/${turno.id}`}
-            className="btn btn-success mx-1 rounded-pill"
+            className="btn btn-editar mx-1 rounded-pill"
           >
             Editar
           </Link>

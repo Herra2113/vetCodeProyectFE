@@ -27,7 +27,7 @@ const App = () => {
   const [turnos, setTurnos] = useState([]);
   const URLS = import.meta.env.VITE_API_TURNOS;
 
-  console.log(URLS)
+  
 
   const getApi = async () => {
     try {
@@ -50,7 +50,7 @@ const App = () => {
   };
   useEffect(() => {
     getAp();
-    // getApi();
+    getApi();
   }, []);
 
   return (

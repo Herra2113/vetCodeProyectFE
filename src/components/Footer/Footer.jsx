@@ -1,27 +1,28 @@
-import React from "react";
+
 import "./styleFooter.css";
 import logodepagina from "../../assets/Images/logoicono.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="row container-fluid" id="footer">
+    <div className="row container-fluid " id="footer">
       <div className="col-sm-12 col-md-4 col-lg-3 text-center">
         <ul>
           <h3 className="mt-5 text-dark">Nosotros</h3>
           <li>
-            <a href="">Quienes somos</a>
+            <Link to="/Nosotros">Quienes somos</Link>
           </li>
           <li>
-            <a href="">Contacto</a>
+            <Link to="/Contacto">Contacto</Link>
           </li>
           <li>
-            <a href="">Productos</a>
+            <Link to="*">Productos</Link>
           </li>
           <li>
-            <a href="">Medicos</a>
+            <Link to="*">Medicos</Link>
           </li>
           <li>
-            <a href="">Direccion</a>
+            <Link to="*">Direccion</Link>
           </li>
         </ul>
       </div>
@@ -29,42 +30,43 @@ const Footer = () => {
         <ul>
           <h3 className="mt-5">Ayuda</h3>
           <li>
-            <a href="">¿Cómo comprar?</a>
+            <Link to="*">¿Cómo comprar?</Link>
           </li>
           <li>
-            <a href="">Preguntas frecuentes</a>
+            <Link to="*">Preguntas frecuentes</Link>
           </li>
           <li>
-            <a href="">Terminos y Condiciones</a>
+            <Link to="*">Terminos y Condiciones</Link>
           </li>
           <li>
-            <a href="">Politicas de devolucion</a>
+            <Link to="*">Politicas de devolucion</Link>
           </li>
           <li>
-            <a href="">Planes Sociales</a>
+            <Link to="*">Planes Sociales</Link>
           </li>
         </ul>
       </div>
-      <div className="col-sm-12 col-md-4 col-lg-4 text-center">
-        <a href="" className="iconoA">
+      <div className="col-sm-12 col-md-4 col-lg-4 d-flex align-items-center">
+        <Link to="/" className="iconoA">
           <img
+            className="w-75"
             src={logodepagina}
             alt="logo de la pagina"
             id="imagenlogodefooter"
           />
-        </a>
+        </Link>
       </div>
       <div className="copyrightFooter">
         <h6 className="copyrightFooterText">©2023-VetCode todos los derechos reservados.</h6>
         <div className="iconosFooter">
           <a href="">
-            <i class="bi bi-instagram"></i>
+            <i className="bi bi-instagram"></i>
           </a>
           <a href="">
-            <i class="bi bi-whatsapp"></i>
+            <i className="bi bi-whatsapp"></i>
           </a>
           <a href="">
-            <i class="bi bi-facebook"></i>
+            <i className="bi bi-facebook"></i>
           </a>
         </div>
       </div>

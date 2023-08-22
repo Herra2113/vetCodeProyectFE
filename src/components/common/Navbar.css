@@ -1,5 +1,6 @@
 #navbar {
   position: fixed top;
+  top: 0;
   width: 100%;
 }
 

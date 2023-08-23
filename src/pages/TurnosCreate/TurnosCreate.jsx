@@ -13,13 +13,17 @@ import {
 import '../AdminView/admin.css'
 import image1 from '../../assets/Images/Enfermero.jpg'
 
-const TurnosCreate = ({ URLS, getAp }) => {
+const TurnosCreate = ({ URL_BASE, getAp, token }) => {
   const [TurnoPetName, setTurnoPetName] = useState('');
   const [TurnoDoctor, setTurnoDoctor] = useState('');
   const [TurnoDetalle, setTurnoDetalle] = useState('');
   const [TurnoFecha, setTurnoFecha] = useState('');
   const [TurnoHora, setTurnoHora] = useState('');
   const navigate = useNavigate();
+
+  if (!token) {
+    navigate('/Login')
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,7 +57,7 @@ const TurnosCreate = ({ URLS, getAp }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(URLS, {
+          const res = await fetch(URL_BASE + '/turnos', {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

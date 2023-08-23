@@ -3,34 +3,40 @@ import { useForm } from "react-hook-form";
 import { password } from "../Login/validar";
 import { user } from "../Login/validar";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+
 
 const Login = () => {
+  const URL_BASE = import.meta.env.VITE_API_URL_BASE;
+
   const navigate = useNavigate();
-  function insertar(data) {
-    if (data.user === "admin" && data.password === "admin") {
-      navigate("/");
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Bienvenido Admin!",
-        showConfirmButton: false,
-        timer: 1500,
+  async function onSubmit(data) {
+    console.log(data)
+    try {
+      const res = await fetch(URL_BASE + '/login', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
+      const {token} = await res.json()
+      if (token) {
+        localStorage.setItem('token', token)
+        navigate('/admin')
+      } 
+    } catch (error) {
+      console.log(error)
     }
-    console.log(data);
-    reset();
   }
   const {
     register,
     formState: { errors },
     handleSubmit,
-    reset,
   } = useForm();
   return (
     <div className="row" id="login">
       <div className="col-3 d-flex justify-content-center" id="inicioSesion">
-        <form onSubmit={handleSubmit(insertar)} className="formcontrolinicio">
+        <form onSubmit={handleSubmit(onSubmit)} className="formcontrolinicio">
           <h2 className="text-center textoiniciosesion">Inicio Sesion</h2>
           <div className="contenedorDeInput container text-center">
             <label htmlFor="user">Usuario</label>

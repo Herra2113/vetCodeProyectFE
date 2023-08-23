@@ -14,7 +14,7 @@ import {
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 
-const AdminClientesCreate = ({ URL, getApi }) => {
+const AdminClientesCreate = ({ getApi }) => {
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
   const [eMail, setEmail] = useState('');
@@ -23,6 +23,7 @@ const AdminClientesCreate = ({ URL, getApi }) => {
   const [especie, setEspecie] = useState('');
   const [raza, setRaza] = useState('');
   const navegacion = useNavigate();
+  const URL_BASE = import.meta.env.VITE_API_URL_BASE;
 
   const hundleSubmit = async (e) => {
     e.preventDefault();
@@ -60,13 +61,13 @@ const AdminClientesCreate = ({ URL, getApi }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(URL, {
+          const res = await fetch(URL_BASE + '/patients', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newPaciente),
           });
           if (res.status === 201) {
-            Swal.fire('Creado!', 'Turno creado.', 'success');
+            Swal.fire('Creado!', 'Paciente Creado.', 'success');
             getApi();
             navegacion('/admin');
           }

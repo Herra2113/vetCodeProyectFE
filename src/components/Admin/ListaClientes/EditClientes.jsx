@@ -14,7 +14,7 @@ import image3 from '../../../assets/Images/Adultos.jpg'
 import image4 from '../../../assets/Images/Adultocard.jpg'
 
 
-const EditClientes = ({ URL , getApi }) => {
+const EditClientes = ({ URL_BASE , getApi }) => {
   const [patient, setPatient] = useState({});
   const { id } = useParams();
   const nombreRef = useRef("");
@@ -32,7 +32,7 @@ const EditClientes = ({ URL , getApi }) => {
 
     async function getPatient () {
     try {
-      const res = await fetch(`${URL}/${id}`);
+      const res = await fetch(`${URL_BASE}/patients/${id}`);
       const patientApi = await res.json();
 
       setPatient(patientApi);
@@ -78,7 +78,7 @@ const EditClientes = ({ URL , getApi }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`${URL}/${id}`, {
+          const res = await fetch(`${URL_BASE}/patients/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(productoEditado),

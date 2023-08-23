@@ -3,7 +3,7 @@ import { Container, Table } from "react-bootstrap";
 import ListaClientes from "./ListaClientes/ListaClientes";
 import { Link } from "react-router-dom";
 
-const AdminClientes = ({ patients, URL, getApi }) => {
+const AdminClientes = ({ patients, URL_BASE, getApi }) => {
   return (
     <div>
       <Container className="py-5">
@@ -11,10 +11,7 @@ const AdminClientes = ({ patients, URL, getApi }) => {
           <h3 className="text-center text-color fw-bold display-4">
             Lista de Pacientes
           </h3>
-          <Link
-            to="/Turnos/Create"
-            className="btn btn-colorize rounded-pill"
-          >
+          <Link to="/Turnos/Create" className="btn btn-colorize rounded-pill">
             Agregar Turnos
           </Link>
         </div>
@@ -36,7 +33,7 @@ const AdminClientes = ({ patients, URL, getApi }) => {
               <ListaClientes
                 key={patient.id}
                 patient={patient}
-                URL={URL}
+                URL_BASE={URL_BASE}
                 getApi={getApi}
               />
             ))}

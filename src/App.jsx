@@ -22,16 +22,13 @@ import LoginPage from "./pages/Login/LoginPage";
 
 const App = () => {
   const [patients, setPatients] = useState([]);
-  const URL = import.meta.env.VITE_API_VETERINARIA;
-
+const token = localStorage.getItem("token");
   const [turnos, setTurnos] = useState([]);
-  const URLS = import.meta.env.VITE_API_TURNOS;
-
-  
+  const URL_BASE = import.meta.env.VITE_API_URL_BASE;
 
   const getApi = async () => {
     try {
-      const response = await fetch(URL);
+      const response = await fetch(URL_BASE + "/patients");
       const patientsApi = await response.json();
       setPatients(patientsApi);
     } catch (error) {
@@ -40,7 +37,7 @@ const App = () => {
   };
   const getAp = async () => {
     try {
-      const res = await fetch(URLS);
+      const res = await fetch(URL_BASE + "/turnos");
 
       const turnosAp = await res.json();
       setTurnos(turnosAp);
@@ -71,28 +68,28 @@ const App = () => {
             exact
             path="/admin"
             element={
-              <AdminPrincipal URL={URL} getApi={getApi} patients={patients} />
+              <AdminPrincipal URL_BASE={URL_BASE} getApi={getApi} patients={patients} token={token} />
             }
           />
           <Route
             exact
             path="/patient/edit/:id"
-            element={<UpdateClient URL={URL} getApi={getApi} />}
+            element={<UpdateClient URL_BASE={URL_BASE} getApi={getApi} token={token} />}
           />
           <Route
             exact
             path="/Turnos/Create"
-            element={<TurnosCreate URLS={URLS} getAp={getAp} />}
+            element={<TurnosCreate URL_BASE={URL_BASE} getAp={getAp} token={token}/>}
           />
           <Route
             exact
             path="/Turnos/Edit/:id"
-            element={<TurnosEdit URLS={URLS} getAp={getAp} />}
+            element={<TurnosEdit URL_BASE={URL_BASE} getAp={getAp} token={token}/>}
           />
           <Route
             exact
             path="/Turnos/Tabla"
-            element={<TurnosTabla turnos={turnos} URLS={URLS} getAp={getAp} />}
+            element={<TurnosTabla turnos={turnos} URL_BASE={URL_BASE} getAp={getAp} token={token} />}
           />
         </Routes>
       </main>

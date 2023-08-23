@@ -1,9 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/prop-types */
+
 import  { useEffect, useRef, useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import '../AdminView/admin.css'
 import {
   validateFecha,
   validateHora,
@@ -12,7 +13,8 @@ import {
   validatetextarea,
 } from "../../Helpers/validacionesTurnos";
 
-const TurnosEdit = ({ URLS, getAp }) => {
+const TurnosEdit = ({ URL_BASE, getAp }) => {
+  const token = localStorage.getItem("token");
   const [turnoEd, setTurnoEd] = useState({});
   const { id } = useParams();
   const TurnoPetNameRef = useRef("");
@@ -22,13 +24,16 @@ const TurnosEdit = ({ URLS, getAp }) => {
   const TurnoHoraRef = useRef("");
 
   const navigate = useNavigate();
-
+  if (!token) {
+    navigate('/Login')
+  }
   useEffect(() => {
 
     async function getTurnos ()  {
     try {
-      const res = await fetch(`${URLS}/${id}`);
+      const res = await fetch(`${URL_BASE}/turnos/${id}`);
       const turnoApi = await res.json();
+      console.log(turnoApi)
       setTurnoEd(turnoApi);
     } catch (error) {
       console.log(error);
@@ -69,7 +74,7 @@ const TurnosEdit = ({ URLS, getAp }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`${URLS}/${id}`, {
+          const res = await fetch(`${URL_BASE}/turnos/${id}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
@@ -88,9 +93,9 @@ const TurnosEdit = ({ URLS, getAp }) => {
     });
   };
   return (
-    <div>
-      <Container className="my-5 container">
-        <h3 className="text-center text-danger display-4">Editar Turnos</h3>
+    <div className="bg-color">
+      <Container className="py-5 container">
+        <h3 className="text-center text-color fw-bold display-4">EDITAR TURNOS</h3>
         <hr />
         <Row>
           <Col sm={12} md={6}>
@@ -128,8 +133,8 @@ const TurnosEdit = ({ URLS, getAp }) => {
                   ref={TurnoDoctorRef}
                 >
                   <option value="">Seleccione al profesional</option>
-                  <option value="Dra Liza Morgan">Dra Liza Morgan</option>
-                  <option value="Dr Adrian Munir">Dr Adrian Munir</option>
+                  <option value="Dra Liza Morgan">Dra Juana Carrasco</option>
+                  <option value="Dr Adrian Munir">Dr John Dolittle</option>
                 </Form.Select>
               </Form.Group>
               <Form.Group

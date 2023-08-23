@@ -4,7 +4,9 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const ListaClientes = ({ patient, URL, getApi }) => {
+const ListaClientes = ({ patient,  getApi }) => {
+  const URL_BASE = import.meta.env.VITE_API_URL_BASE;
+
   const hundleDelete = (id) => {
   
     Swal.fire({
@@ -16,7 +18,7 @@ const ListaClientes = ({ patient, URL, getApi }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`${URL}/${id}`, {
+          const res = await fetch(`${URL_BASE}/patients/${id}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
           });
@@ -44,13 +46,13 @@ const ListaClientes = ({ patient, URL, getApi }) => {
         <div className="d-flex justify-content-center">
           <Link
             className="btn btn-success mx-1 rounded-pill"
-            to={`/patient/edit/${patient.id}`}
+            to={`/patient/edit/${patient._id}`}
           >
             Editar
           </Link>
           <button
             className="btn btn-danger mx-1 rounded-pill"
-            onClick={() => hundleDelete(patient.id)}
+            onClick={() => hundleDelete(patient._id)}
           >
             Eliminar
           </button>

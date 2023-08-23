@@ -3,14 +3,20 @@
 import AdminClientesCreate from '../../components/Admin/AdminClientesCreate'
 import AdminClientes from '../../components/Admin/AdminClientes'
 import './admin.css'
+import { useNavigate } from "react-router-dom";
 
 
 
-const AdminPrincipal = ({URL , getApi, patients}) => {
+const AdminPrincipal = ({URL_BASE , getApi, patients, token}) => {
+  
+  const navigate = useNavigate()
+  if (!token) {
+    navigate('/Login')
+  }
   return (
     <div className='bg-color'>
-      <AdminClientesCreate URL={URL} getApi={getApi}/>
-      <AdminClientes patients={patients} URL={URL} getApi={getApi} />
+      <AdminClientesCreate URL_BASE={URL_BASE} getApi={getApi}/>
+      <AdminClientes patients={patients} URL_BASE={URL_BASE} getApi={getApi} />
     </div>
   )
 }

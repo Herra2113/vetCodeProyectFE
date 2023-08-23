@@ -1,12 +1,17 @@
 /* eslint-disable react/prop-types */
 
 import { Container, Table } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Turnos from './Turnos/Turnos';
 import '../AdminView/admin.css'
 
 
-const TurnosTabla = ({ turnos, URLS, getAp }) => {
+const TurnosTabla = ({ turnos, URL_BASE, getAp }) => {
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate()
+  if (!token) {
+    navigate('/Login')
+  }
   return (
     <div className='bg-color turnos-heigth'>
       <Container className="py-5">
@@ -29,7 +34,7 @@ const TurnosTabla = ({ turnos, URLS, getAp }) => {
           </thead>
           <tbody>
             {turnos.map((turno) => (
-              <Turnos key={turno._id} turno={turno} URLS={URLS} getAp={getAp} />
+              <Turnos key={turno._id} turno={turno} URL_BASE={URL_BASE} getAp={getAp} />
             ))}
           </tbody>
         </Table>

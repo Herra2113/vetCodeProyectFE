@@ -4,7 +4,7 @@ import CardPlanes from "../../components/Planes/CardPlanes";
 import WorkWithUs from "../../components/WorkWithUs/WorkWithUs";
 import Publicidad from "../../components/Publicidad/Publicidad";
 import ProductosDeseados from "../../components/ProductosDeseados/ProductosDeseados";
-import Footer from "../../components/Footer/Footer";
+
 
 
 
@@ -13,11 +13,10 @@ const IndexPages = () => {
     <>
       <CarouselIndex />
       <CardPlanes />
-      <WorkWithUs />
       <Publicidad />
       <ProductosDeseados />
       <Comentarios />
-      <Footer/>
+      <WorkWithUs />
     </>
   );
 };

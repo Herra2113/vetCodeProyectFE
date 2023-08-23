@@ -1,8 +1,9 @@
 import React from "react";
 import Cards from "react-bootstrap/Card";
-import Enfermero from "../../assets/Images/Enfermero.jpg";
-import Cirujano from "../../assets/Images/Cirujano.jpg";
-import Graduado from "../../assets/Images/Graduados.jpg";
+import Enfermero from "../../assets/Images/Enfermero.png";
+import Cirujano from "../../assets/Images/Cirujano.png";
+import Graduado from "../../assets/Images/Graduado.png";
+import { Link } from "react-router-dom";
 import "./WorkWithUs.css";
 const WorkWithUs = () => {
   return (
@@ -20,9 +21,10 @@ const WorkWithUs = () => {
               mejor se adapte a usted... un lugar que simplemente se sienta
               bien, donde pueda prosperar y continuar desarrollando su carrera.
             </Cards.Text>
-            <a rel="stylesheet" href="#" className="btn btn-dark rounded-0">
-              Mas Info!
-            </a>
+            
+            <Link to="/Contacto" className= "btn btn-dark rounded-0">Mas Info!</Link>
+              
+            
           </Cards.Body>
         </div>
         <div className="cardsOportunidades col-md-4 text-center">
@@ -40,9 +42,7 @@ const WorkWithUs = () => {
               reconocer estas contribuciones y a brindarles a nuestros colegas
               de enfermería oportunidades de aprendizaje específicas.
             </Cards.Text>
-            <a rel="stylesheet" href="#" className="btn btn-dark rounded-0">
-              Mas Info!
-            </a>
+            <Link to="/Contacto" className= "btn btn-dark rounded-0">Mas Info!</Link>
           </Cards.Body>
         </div>
         <div className="cardsOportunidades col-md-4 text-center">
@@ -54,9 +54,7 @@ const WorkWithUs = () => {
               ayudarlo a desarrollar su potencial y brindarle el mejor comienzo
               posible en todos los sentidos.
             </Cards.Text>
-            <a rel="stylesheet" href="#" className="btn btn-dark rounded-0">
-              Mas Info!
-            </a>
+            <Link to="/Contacto" className= "btn btn-dark rounded-0">Mas Info!</Link>
           </Cards.Body>
         </div>
       </div>

@@ -14,7 +14,6 @@ const DetallesplanMadurando = () => {
         </h1>
         <CoberturasyServicios />
         <Formulario />
-        
       </div>
     </>
   );

@@ -12,3 +12,7 @@
   width: 75px;
   height: 75px;
 }
+
+.linksNavbar{
+  display: flex;
+}

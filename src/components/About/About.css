@@ -11,26 +11,5 @@
 #logo{
 width:200px;
 }
-.cardsOportunidades:hover{
-    box-shadow: 5px 10px 20px 1px rgba(2, 2, 116, 0.273) !important;
-    transition: all 0.5s linear;
-
-}
-.cardsBody{
-padding: 2rem 0 !important;
-}
-.cardImg{
-    transition: all 0.2s ease-in-out;
-}
-.cardImg:hover{
-    transform: scale(1.1);
-}
-.cardsAbout{
-    object-fit: cover;
-    max-width: var(--max);
-    height: calc(var(--max));
-    width: 100%;
-}
-
 
 

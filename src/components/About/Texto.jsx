@@ -6,7 +6,7 @@ const Texto = () => {
     <div className="container">
       <div className="row">
         <h1 className="display-2 text-center">CONOCE A NUESTRO EQUIPO</h1>
-        <div className="col-lg-12 fw-semibold">
+        <div className="col-lg-7 fw-semibold">
           COMPASION | INTEGRIDAD | CONFIANZA
         </div>
 

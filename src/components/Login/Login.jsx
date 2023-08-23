@@ -9,14 +9,14 @@ const Login = () => {
   const navigate = useNavigate();
   function insertar(data) {
     if (data.user === "admin" && data.password === "admin") {
-      navigate(("/"));
+      navigate("/");
       Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Bienvenido Admin!',
+        position: "center",
+        icon: "success",
+        title: "Bienvenido Admin!",
         showConfirmButton: false,
-        timer: 1500
-      })
+        timer: 1500,
+      });
     }
     console.log(data);
     reset();
@@ -73,9 +73,7 @@ const Login = () => {
             {errors.password?.type === "required" && (
               <p>Ingrese su Contraseña. Por favor. </p>
             )}
-            {errors.password && (
-              <p>Contraseña Incorrecta. Prueba otra vez. </p>
-            )}
+            {errors.password && <p>Contraseña Incorrecta. Prueba otra vez. </p>}
             {errors.password?.type === "minLength" && (
               <p>Ingrese como minimo 5 caracteres. Por favor. </p>
             )}

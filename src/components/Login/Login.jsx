@@ -1,37 +1,88 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
 import "./styleLogin.css";
+import { useForm } from "react-hook-form";
+import { password } from "../Login/validar";
+import { user } from "../Login/validar";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const navigate = useNavigate();
+  function insertar(data) {
+    if (data.user === "admin" && data.password === "admin") {
+      navigate("/");
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Bienvenido Admin!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    }
+    console.log(data);
+    reset();
+  }
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
   return (
     <div className="row" id="login">
       <div className="col-3 d-flex justify-content-center" id="inicioSesion">
-        <form action="" className="formcontrolinicio">
+        <form onSubmit={handleSubmit(insertar)} className="formcontrolinicio">
           <h2 className="text-center textoiniciosesion">Inicio Sesion</h2>
           <div className="contenedorDeInput container text-center">
-            <label htmlFor="usuario">Usuario</label>
+            <label htmlFor="user">Usuario</label>
             <input
               type="text"
-              id="usuario"
               placeholder="UsuarioVet"
               className="form-control"
-              maxLength={5}
-              minLength={5}
+              {...register("user", {
+                required: true,
+                minLength: 5,
+                maxLength: 5,
+                validate: user,
+              })}
             />
+            {errors.user?.type === "required" && (
+              <p>Ingrese su Usuario. Por favor. </p>
+            )}
+            {errors.user && <p> Usuario Incorrecto.</p>}
+            {errors.user?.type === "minLength" && (
+              <p>Ingrese como minimo 5 caracteres. Por favor. </p>
+            )}
+            {errors.user?.type === "maxLength" && (
+              <p>Ingresó el maximo de caracteres. </p>
+            )}
           </div>
           <div className="contenedorDeInput container mt-2 text-center">
-            <label htmlFor="contraseña">Contraseña</label>
+            <label htmlFor="password">Contraseña</label>
             <input
               type="password"
-              id="contraseña"
+              id="password"
               placeholder="ConstraseñaVet"
               className="form-control"
-              maxLength={5}
-              minLength={5}
+              {...register("password", {
+                required: true,
+                minLength: 5,
+                maxLength: 5,
+                validate: password,
+              })}
             />
+            {errors.password?.type === "required" && (
+              <p>Ingrese su Contraseña. Por favor. </p>
+            )}
+            {errors.password && <p>Contraseña Incorrecta. Prueba otra vez. </p>}
+            {errors.password?.type === "minLength" && (
+              <p>Ingrese como minimo 5 caracteres. Por favor. </p>
+            )}
+            {errors.password?.type === "maxLength" && (
+              <p>Ingresó el maximo de caracteres para una password. </p>
+            )}
           </div>
           <button
-            type="submit"
+            // onClick={handleLogin}
             className="mt-3 mb-3 btn btn-outline-primary botondelinicio"
             id="botonInicioSesion"
           >

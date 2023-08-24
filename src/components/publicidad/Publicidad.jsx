@@ -3,7 +3,7 @@ import imagenpublicidad from "../../assets/Images/publicidadcomida.png";
 
 const Publicidad = () => {
   return (
-    <div className="publicidadDiv mb-5">
+    <div className="publicidadDiv mb-5 ">
       <a href="https://www.google.com">
         <img
           src={imagenpublicidad}

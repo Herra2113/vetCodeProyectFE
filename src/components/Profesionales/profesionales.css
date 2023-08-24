@@ -1,5 +1,7 @@
 .bodyBg{
-    background-color: #D3CEDF;
+
+    background: linear-gradient(180deg, rgba(242,215,217,1) 0%,
+     rgba(211,206,223,1) 35%, rgba(156,180,204,1) 100%);
 }
 .bodyBgprof{
     background-color: #748DA6;

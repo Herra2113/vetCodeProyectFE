@@ -1,12 +1,17 @@
+body{
+    background-color: #9cb4cc;
+}
 .publicidadDiv{
     position: relative;
     margin: 0px;
+    
 }
 
 #imagenpublicidad{
     width: 100%;
-    height: 10%;
+    height: 100%;
     z-index: 1;
+   
 }
 
 #botonpublicidad{

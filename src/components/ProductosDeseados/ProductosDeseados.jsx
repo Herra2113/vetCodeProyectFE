@@ -1,18 +1,21 @@
 import "./ProductosDeseados.css";
-import React from "react";
 import Button from "react-bootstrap/Button";
 
 const ProductosDeseados = () => {
   return (
-    <div className="prodDestacados row mt-4">
-      <h1 className="tituloProd container-fluid col-9 text-center">
+    
+    <div className="prodDestacados  mt-4">
+      <h1 className="tituloProd container col-9 text-center">
         PRODUCTOS DESTACADOS
       </h1>
-      <section className="seccionDeProd row mt-3 d-flex justify-content-center">
-        <article className="productoSolo col-sm-5 col-md-3 col-lg-2 text-center">
+      <section className="seccionDeProd justify-content-center mt-3 d-flex  ">
+        <div className="row w-100 justify-content-around ">
+
+        <article className="productoSolo col-5 col-md-3 col-lg-2 text-center">
+
           <a href="" className="articulosProd">
             <img
-              className="imagenProd"
+              className="w-100"
               src="https://http2.mlstatic.com/D_NQ_NP_2X_704381-MLA50131832314_052022-F.webp"
               alt="imagen de producto1"
               id="prod1"
@@ -28,10 +31,10 @@ const ProductosDeseados = () => {
           </a>
         </article>
 
-        <article className="productoSolo col-sm-5 col-md-3 col-lg-2 text-center">
+        <article className="productoSolo col-5 col-md-3 col-lg-2 text-center">
           <a href="" className="articulosProd">
             <img
-              className="imagenProd"
+              className="w-100"
               src="https://http2.mlstatic.com/D_NQ_NP_2X_768964-MLA70630902317_072023-F.webp"
               alt="imagen de producto1"
               id="prod2"
@@ -47,10 +50,10 @@ const ProductosDeseados = () => {
           </a>
         </article>
 
-        <article className="productoSolo col-sm-5 col-md-3 col-lg-2 text-center">
+        <article className="productoSolo col-5 col-md-3 col-lg-2 text-center">
           <a href="" className="articulosProd">
             <img
-              className="imagenProd"
+              className="w-100"
               src="https://http2.mlstatic.com/D_NQ_NP_2X_951124-MLA54939344652_042023-F.webp"
               alt="imagen de producto1"
               id="prod3"
@@ -66,10 +69,10 @@ const ProductosDeseados = () => {
           </a>
         </article>
 
-        <article className="productoSolo col-sm-5 col-md-3 col-lg-2 text-center">
+        <article className="productoSolo col-5 col-md-3 col-lg-2 text-center">
           <a href="" className="articulosProd">
             <img
-              className="imagenProd"
+              className="w-100"
               src="https://http2.mlstatic.com/D_NQ_NP_2X_923445-MLA54989875564_052023-F.webp"
               alt="imagen de producto1"
               id="prod4"
@@ -84,6 +87,7 @@ const ProductosDeseados = () => {
             </Button>{" "}
           </a>
         </article>
+        </div>
       </section>
     </div>
   );

@@ -1,5 +1,6 @@
 #navbar {
-  position: fixed;
+  position: fixed top;
+  top: 0;
   width: 100%;
 }
 
@@ -10,4 +11,8 @@
 .imagenLogo {
   width: 75px;
   height: 75px;
+}
+
+.linksNavbar{
+  display: flex;
 }

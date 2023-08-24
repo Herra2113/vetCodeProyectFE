@@ -19,7 +19,6 @@
   border-radius: 2%;
   margin: 15px;
   margin-top: 0px;
-  height: 24rem;
   padding: 0.7rem;
   display: flex;
   justify-content: center;
@@ -27,11 +26,7 @@
   align-items: center;
 }
 
-.imagenProd {
-  width: 8rem;
-  height: 13.5rem;
-  display: flex;
-}
+
 
 .nombreDelProd {
   font-size: larger;
@@ -69,15 +64,7 @@
   width: 14rem;
   height: 13rem;
 }
-@media (max-width: 569px) {
-  .seccionDeProd {
-    margin: auto;
-  }
 
-  .productoSolo {
-    width: 16rem;
-  }
-}
 
 .articulosProd {
   text-decoration: none;
